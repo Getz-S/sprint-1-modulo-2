@@ -1,0 +1,107 @@
+//Variables SASS
+
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+$font-body: "Epilogue";
+$font-size-body: 16px;
+$color-text: #f4f4f4;
+$color-text-light: #dcdcdc;
+$color-light-purple: #BC8CF2;
+$color-dark-purple: #4C3575;
+
+
+
+//importar partials o modules
+
+@import "universals";
+
+//propiedades body
+
+body{
+    background-image: radial-gradient(circle at 50% 50%, #f2bfff 0, #d5aeff 25%, #b99df2 50%, #9e8cd6 75%, #867bbc 100%);
+    width: 100vw;
+    height: 100vh;
+}
+
+//reglas anidadas
+
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        width: 700px;
+        padding: 50px 90px;
+        background-color: $color-dark-purple;
+        box-shadow: 0 0 10px;
+        border-radius: 30px;
+        h1{
+            font-size: 50px;
+            color: #fff;
+        }
+    }
+
+    &__top-container{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    &__logo{
+        width: 150px;
+    }
+
+    &__options{
+        display: flex;
+        gap: 15px;
+        p{
+            color: $color-text-light;
+        }
+    }
+    &__option{
+        font-size: 25px;
+        color: $color-text-light;
+        text-decoration: none;
+        &--selected{
+            color: $color-text;
+            border-bottom: 2px solid $color-text;
+        }
+    }
+
+    &__bottom-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        p{
+            color: $color-text;
+        }
+        input{
+            height: 30px;
+            background: none;
+            border: none;
+            border-bottom: 1px solid gray;
+            color: $color-text;
+            outline: none;
+        }
+        button{
+            margin-top: 15px;
+            height: 35px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    }
+}

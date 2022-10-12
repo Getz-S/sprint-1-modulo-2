@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js" integrity="sha512-bHeT+z+n8rh9CKrSrbyfbINxu7gsBmSHlDCb3gUF1BjmjDzKhoKspyB71k0CIRBSjE5IVQiMMVBgCWjF60qsvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Dovvy</title>
+</head>
+
+<body>
+    <aside class="aside">
+        <div class="aside__defaultSection" id="aside__defaultSection">
+            <div class="aside__top" id="topAside">
+
+            </div>
+            <div class="aside__search">
+                <form class="aside__form" id="formSearch">
+                    <input type="text" placeholder="Search chats">
+                    <button type="submit">Search ID</button>
+                </form>
+            </div>
+            <section class="aside__chats-container" id="aside__chats-container">
+                <article class="aside__chat">
+                    <figure>
+                        <img src=" https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360"
+                            alt="">
+                    </figure>
+                    <div class="aside__chat-information">
+                        <h3>Emilio</h3>
+                        <p><span data-testid="msg-dblcheck" aria-label=" Consegnato " data-icon="msg-dblcheck" class
+                                style="user-select: auto;"> <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                    class style="user-select: auto;">
+                                    <path
+                                        d="M11.071.653a.457.457 0 0 0-.304-.102.493.493 0 0 0-.381.178l-6.19 7.636-2.405-2.272a.463.463 0 0 0-.336-.146.47.47 0 0 0-.343.146l-.311.31a.445.445 0 0 0-.14.337c0 .136.047.25.14.343l2.996 2.996a.724.724 0 0 0 .501.203.697.697 0 0 0 .546-.266l6.646-8.417a.497.497 0 0 0 .108-.299.441.441 0 0 0-.19-.374L11.07.653Zm-2.45 7.674a15.31 15.31 0 0 1-.546-.355.43.43 0 0 0-.317-.12.46.46 0 0 0-.362.158l-.292.33a.482.482 0 0 0 .013.666l1.079 1.073c.135.135.3.203.495.203a.699.699 0 0 0 .552-.267l6.62-8.391a.446.446 0 0 0 .109-.298.487.487 0 0 0-.178-.375l-.355-.273a.487.487 0 0 0-.673.076L8.62 8.327Z"
+                                        fill="currentColor" style="user-select: auto;"></path>
+                                </svg></span> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </article>
+                <article class="aside__chat">
+                    <figure>
+                        <img src=" https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360"
+                            alt="">
+                    </figure>
+                    <div class="aside__chat-information">
+                        <h3>Emilio</h3>
+                        <p><span data-testid="msg-check" aria-label=" Inviato " data-icon="msg-check" class=""
+                                style="user-select: auto;"><svg width="12" height="11" viewBox="0 0 12 11" fill="none"
+                                    class="" style="user-select: auto;">
+                                    <path
+                                        d="M11.155.653A.457.457 0 0 0 10.85.55a.493.493 0 0 0-.38.178L4.28 8.365 1.875 6.093a.463.463 0 0 0-.336-.146.47.47 0 0 0-.344.146l-.31.31a.445.445 0 0 0-.14.337c0 .136.046.25.14.343l2.995 2.996a.724.724 0 0 0 .502.203.697.697 0 0 0 .546-.266l6.646-8.417a.497.497 0 0 0 .108-.299.441.441 0 0 0-.19-.374l-.337-.273Z"
+                                        fill="currentcolor" style="user-select: auto;"></path>
+                                </svg></span> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </article>
+                <article class="aside__chat">
+                    <figure>
+                        <img src=" https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360"
+                            alt="">
+                    </figure>
+                    <div class="aside__chat-information">
+                        <h3>Emilio</h3>
+                        <p><span data-testid="msg-dblcheck" aria-label=" Letto " data-icon="msg-dblcheck" class="_3l4_3"
+                                style="user-select: auto;"><svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                    class="" style="user-select: auto;">
+                                    <path
+                                        d="M11.071.653a.457.457 0 0 0-.304-.102.493.493 0 0 0-.381.178l-6.19 7.636-2.405-2.272a.463.463 0 0 0-.336-.146.47.47 0 0 0-.343.146l-.311.31a.445.445 0 0 0-.14.337c0 .136.047.25.14.343l2.996 2.996a.724.724 0 0 0 .501.203.697.697 0 0 0 .546-.266l6.646-8.417a.497.497 0 0 0 .108-.299.441.441 0 0 0-.19-.374L11.07.653Zm-2.45 7.674a15.31 15.31 0 0 1-.546-.355.43.43 0 0 0-.317-.12.46.46 0 0 0-.362.158l-.292.33a.482.482 0 0 0 .013.666l1.079 1.073c.135.135.3.203.495.203a.699.699 0 0 0 .552-.267l6.62-8.391a.446.446 0 0 0 .109-.298.487.487 0 0 0-.178-.375l-.355-.273a.487.487 0 0 0-.673.076L8.62 8.327Z"
+                                        fill="currentColor" style="user-select: auto;"></path>
+                                </svg></span> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </article>
+                <article class="aside__chat">
+                    <figure>
+                        <img src=" https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360"
+                            alt="">
+                    </figure>
+                    <div class="aside__chat-information">
+                        <h3>Emilio</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </article>
+                <article class="aside__chat">
+                    <figure>
+                        <img src=" https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360"
+                            alt="">
+                    </figure>
+                    <div class="aside__chat-information">
+                        <h3>Emilio</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </article>
+                <article class="aside__chat">
+                    <figure>
+                        <img src=" https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360"
+                            alt="">
+                    </figure>
+                    <div class="aside__chat-information">
+                        <h3>Emilio</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </article>
+                <article class="aside__chat">
+                    <figure>
+                        <img src=" https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360"
+                            alt="">
+                    </figure>
+                    <div class="aside__chat-information">
+                        <h3>Emilio</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </article>
+                <article class="aside__chat">
+                    <figure>
+                        <img src=" https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360"
+                            alt="">
+                    </figure>
+                    <div class="aside__chat-information">
+                        <h3>Emilio</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <div class="aside__profileSection" id="aside__profileSection">
+            <div class="aside__topPS">
+                <img src="../images/arrowLeft.png" alt="Arrow left" id="arrowLeft">
+                <h3>Profile</h3>
+            </div>
+            <form class="aside__formPS" id="aside__formPS">
+                <p>Your profile photo</p>
+                <input id="inputProfilePhoto" type="url" placeholder="Enter an url for your profile photo">
+                <p>Your name</p>
+                <input id="inputName" type="text" placeholder="Enter your username">
+                <button type="submit">Save changes</button>
+            </form>
+        </div>
+
+    </aside>
+    <main class="main">
+        <div class="main__top" id="main__top">
+            <img src="https://www.freecodecamp.org/news/content/images/2021/03/Quincy-Larson-photo.jpg"
+                alt="">
+            <div class="main__top-information">
+                <h3>Juan</h3>
+                <p>EN LINEA</p>
+            </div>
+        </div>
+        <section class="main__chat">
+            <div class="main__chatContainer">
+
+            </div>
+            <form class="main__form">
+                <img src="../images/smile.svg" alt="Smile Icon">
+                <img src="../images/paperclip.svg" alt="Paperclip Icon">
+                <input type="text" placeholder="Send message">
+                <button type="submit"><img src="../images/buttonSend.png" alt=""></button>
+            </form>
+        </section>
+    </main>
+    <script src="../scripts/home.js" type="module"></script>
+</body>
+
+</html>

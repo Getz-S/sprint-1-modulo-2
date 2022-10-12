@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0/axios.min.js" integrity="sha512-26uCxGyoPL1nESYXHQ+KUmm3Maml7MEQNWU8hIt1hJaZa5KQAQ5ehBqK6eydcCOh6YAuZjV3augxu/5tY4fsgQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Dovvy</title>
+</head>
+<body>
+    <main class="main">
+        <section class="main__container">
+            <div class="main__top-container">
+                <figure>
+                    <img class="main__logo" src="../images/logo.png" alt="logo">
+                </figure>
+                <h1>Dovvy</h1>
+            </div>
+            <div class="main__bottom-container">
+                <div class="main__options">
+                    <a class="main__option" href="../index.html">Sign In</a>
+                    <p>or</p>
+                    <a class="main__option main__option--selected" href="#">Sign Up</a>
+                </div>
+                <form id="form__register" class="main__form">
+                    <p>NAME</p>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <p>CELL PHONE NUMBER</p>
+                    <input type="number" id="phoneNumber" placeholder="Enter your cell phone number" required>
+                    <p>PASSWORD</p>
+                    <input type="password" id="password" placeholder="Create your password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="../scripts/register.js" type="module"></script>
+</body>
+</html>

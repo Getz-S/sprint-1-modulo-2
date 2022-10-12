@@ -1,0 +1,259 @@
+//Variables SASS
+
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+$font-body: "Epilogue";
+$font-size-body: 16px;
+$color-text: #f4f4f4;
+$color-text-light: #dcdcdc;
+$color-light-purple: #BC8CF2;
+$color-dark-purple: #4C3575;
+$color-lessdark-purple: #6e4d9f;
+
+
+
+//importar partials o modules
+
+@import "universals";
+
+//propiedades body
+
+body{
+    font-size: $font-size-body;
+    height: 100vh;
+    display: flex;
+}
+
+//reglas anidadas
+
+.aside{
+    width: 35%;
+    &__defaultSection{
+        width: 100%;
+        &--hidden{
+            display: none;
+        }
+    }
+    &__top{
+        width: 100%;
+        height: 70px;
+        background-color: $color-lessdark-purple;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 15px;
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+    &__btnCloseSession{
+        height: 80%;
+        border-radius: 20%;
+        padding: 0 10px;
+        border: 2px solid $color-text;
+        background: none;
+        color: $color-text;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-text;
+            color: black;
+        }
+    }
+    &__search{
+        background-color: $color-dark-purple;
+        height: 70px;
+    }
+    &__form{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        input{
+            height: 60%;
+            width: 80%;
+            border-radius: 20px;
+            padding: 0 20px;
+            font-size: $font-size-body;
+            outline: none;
+        }
+        button{
+            height: 60%;
+            border-radius: 10px;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+    &__chats-container{
+        display: flex;
+        flex-direction: column;
+        background-color: $color-dark-purple;
+        height: calc(100vh - 140px);
+        overflow-y: auto;
+        &::-webkit-scrollbar{
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track{
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: $color-text;
+            outline: 1px solid slategrey;
+        }
+    }
+    &__chat{
+        width: 100%;
+        background-color: $color-dark-purple;
+        display: flex;
+        padding: 15px 20px;
+        gap: 15px;
+        border-bottom: 2px solid $color-lessdark-purple;
+        color: $color-text;
+        cursor: pointer;
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        &:hover{
+            background-color: $color-lessdark-purple;
+        }
+    }
+    &__chat-information{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__profileSection{
+        background-color: $color-lessdark-purple;
+        height: 100vh;
+        display: none;
+        &--show{
+            display: block;
+        }
+    }
+    &__topPS{
+        height: 15%;
+        background-color: $color-dark-purple;
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+        padding: 20px;
+        img{
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            &:hover{
+                transform: translateX(-5px);
+                transition: 0.3s;
+            }
+        }
+        h3{
+            color: $color-text;
+            font-size: 28px;
+        }
+    }
+    &__formPS{
+        height: 40%;
+        background-color: #8661ba;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        p{
+            color: $color-text-light;
+            font-size: 18px;
+        }
+        input{
+            height: 40px;
+            background: none;
+            border: none;
+            border-bottom: 1px solid $color-text;
+            color: $color-text;
+            font-size: 20px;
+            outline: none;
+            &::placeholder{
+                color: $color-text;
+            }
+        }
+        button{
+            margin-top: 20px;
+            height: 35px;
+            border:none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    }
+}
+
+.main{
+    height: 100%;
+    width: 65%;
+    &__top{
+        height: 70px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: $color-lessdark-purple;
+        padding: 5px 15px;
+        border-left: 2px solid $color-dark-purple;
+        cursor: pointer;
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+
+    &__top-information{
+        color: $color-text;
+        margin-left: 10px;
+    }
+
+    &__chat{
+        height: calc(100vh - 70px);
+    }
+
+    &__chatContainer{
+        height: 89%;
+        background-color: #392856;
+        background-image: url(../images/chat-background.png);
+    }
+    
+    &__form{
+        height: 11%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $color-text;
+        img{
+            cursor: pointer;
+        }
+        input{
+            height: 67%;
+            width: 83%;
+            border-radius: 20px;
+            border: none;
+            background-color: #fff;
+            outline: none;
+            padding: 0 20px;
+            font-size: $font-size-body;
+        }
+        button{
+            width: 40px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+            img{
+                width: 30px;
+            }
+        }
+    }
+
+}
